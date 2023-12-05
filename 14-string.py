@@ -30,3 +30,49 @@ print(str4)
 
 print(isinstance(str1,str))
 print(isinstance(55,str))
+
+# length
+
+print("Length of String:",len(str4))
+
+
+# concate
+
+s1="Hello"
+s2="World"
+
+print(s1+s2)
+
+print(s1*5)
+
+# index
+
+sen="Hello have a nice day"
+
+print("6th letter:",sen[6])
+
+# reverse index
+
+print("last letter:",sen[-1])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
