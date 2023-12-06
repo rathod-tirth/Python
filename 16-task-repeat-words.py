@@ -1,4 +1,4 @@
-# task
+# no. of repeated  words
 
 name=input("Enter : ")
 char=input("Enter char:")

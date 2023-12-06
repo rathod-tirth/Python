@@ -1,4 +1,4 @@
-# split string task
+# split string into words
 
 name=input("Enter : ")
 
@@ -9,5 +9,3 @@ for element in word:
     count+=1
 
 print(f"No. of words: {count}")
-
-
