@@ -4,7 +4,7 @@
     - represents with : 'hello',"hello","""Hello"""
     - class : str
     - indexible (starts from 0)
-    - mutable
+    - immutable
     - iterable
     - supports -ve indexing (starts from -1)
     
