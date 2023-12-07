@@ -28,4 +28,3 @@ print(str1.split(" "))
 
 # title : first character capital of the word
 print(str1.title())
-
