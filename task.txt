@@ -1,3 +1,0 @@
-odd even list
-
-sort the list without using in-built func
