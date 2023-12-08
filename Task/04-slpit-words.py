@@ -1,6 +1,6 @@
-# split string into words
+# spliting the string into words and counting no of words
 
-name=input("Enter : ")
+name=input("Enter a Sentence: ")
 
 word=name.split(" ")
 count=0
