@@ -1,12 +1,18 @@
 # loop task
 
-#task1
+# task1 : 
+
+'''
+    1) Hello
+    2) Hello
+    3) Hello...
+'''
 
 for i in range(1,11):
     print(f"{i}) Hello")
 
 
-#task2
+# task2: Summation
 
 count=0
 
@@ -17,7 +23,7 @@ for i in range(1,11):
 print("Total =",count)
 
 
-#task3
+#task3: odd even
 
 even=0
 odd=0
