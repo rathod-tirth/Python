@@ -1,4 +1,4 @@
-# odd even list
+# no. of odd and even from the given list
 
 li=[21,56,47,8,23,42,10,46,68,92,37]
 
