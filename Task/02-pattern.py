@@ -69,11 +69,11 @@ for x in range(5):
 # task5:
 
 '''
-1 
-1 0 
-1 0 1 
-1 0 1 0 
-1 0 1 0 1 
+    1 
+    1 0 
+    1 0 1 
+    1 0 1 0 
+    1 0 1 0 1 
 '''
 
 '''
@@ -125,40 +125,37 @@ for x in range(5):
 # task8:
 
 '''
-A 
-B C 
-D E F 
-G H I J 
-K L M N O 
+    A 
+    B C 
+    D E F 
+    G H I J 
+    K L M N O 
 '''
 
 '''
-alpha=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
-count=-1
+count=0
 
-for i in range(1,6):
-    for j in range(1,i+1):
+for i in range(5):
+    for j in range(0,i+1):
+        print(chr(65+count),end=" ")
         count+=1
-        print(alpha[count],end=" ")
     print()
 '''
 
 # task9:
 
 '''
-A 
-A B 
-A B C 
-A B C D 
-A B C D E
+    A 
+    A B 
+    A B C 
+    A B C D 
+    A B C D E
 '''
 
 '''
-alpha=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
-
 for i in range(5):
     for j in range(0,i+1):
-        print(alpha[j],end=" ")
+        print(chr(65+j),end=" ")
     print()
 '''
 
@@ -180,11 +177,11 @@ for i in range(1,6):
 '''
 
 '''
-* * * * *  
-* * * *   
-* * *    
-* *     
-*
+    * * * * *  
+    * * * *   
+    * * *    
+    * *     
+    *
 '''
 
 '''
