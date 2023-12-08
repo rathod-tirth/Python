@@ -11,4 +11,6 @@ for element in li:
     else:
         odd+=1
 
-print(f"Odd: {odd} Even: {even}")
+print(f"No. of Odd: {odd}")
+print(f"No. of Even: {even}")
+
