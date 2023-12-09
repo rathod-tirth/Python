@@ -1,4 +1,4 @@
-# task
+# user input to dict key value
 
 student={}
 
