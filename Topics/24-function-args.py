@@ -1,7 +1,7 @@
 '''
     Types of Arguments :
 
-    - Positinal argument: int,float,string,variable,list,tuple,dict,etc.
+    - Arbitary argument: int,float,string,variable,list,tuple,dict,etc.
     - Ex. func(8,6,num1,"abc",[5,7,3,10],...)
 
     - Key-word argument: agrument with key value pair
@@ -43,6 +43,17 @@ def info(**data):
     print("Data:",data)
 
 info(name="Tirth",Age=18,City="Abad")
+
+print()
+
+# can add multiple normal arguments before arbitary or keyword arguments
+
+def compare(x,*num):
+    for i in num:
+        if(x==i):
+            print(f"X is equal to {i}")
+
+compare(5,15,10,23,5,74,34,89,47)
 
 
 
