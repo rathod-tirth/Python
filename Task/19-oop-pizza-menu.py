@@ -53,6 +53,7 @@ class Product():
 # contains all the calculation and billing data
 class Bill(Product):
    def __init__(self):
+      super().__init__()
       self.total=0
       
       # pizza
@@ -69,6 +70,7 @@ class Bill(Product):
       
       self.orderPizza()
       self.orderPasta()
+      self.special_offer()
          
       total=self.pizzaAmount+self.pastaAmount
       print(f"\nYour Total Order is: ₹{total}")
@@ -108,7 +110,7 @@ class Bill(Product):
    
    # combo special offer
    def special_offer(self):
-      if self.pizzaOrder>3 and self.pastaOrder>3:
+      if self.pizzaNum>3 and self.pastaNum>3:
          self.ice_cream+=2
          print("\n *** Congratulations !! Get 2 Chocco Brownies Ice Cream free ***")
    
