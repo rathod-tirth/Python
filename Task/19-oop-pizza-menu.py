@@ -161,7 +161,7 @@ while status:
    name=input("Enter your name: ")
    print(f"\nWelcome, {name}\n")
 
-   # total earning of the day
+   # total earnings of the day
    print(f"\n==>> Your Net Order Amount of the day is : ₹{bill.order()}")
    
    # for more customers
