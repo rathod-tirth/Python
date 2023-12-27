@@ -2,8 +2,9 @@ import datetime,os
 
 status=True
 
-# title/printout
-title="Vaccination Report"
+# printouts
+title="Vaccination Report".center(50)
+dash="-------------------------------------------------------------"
 print(title)
 
 while(status):
@@ -12,19 +13,6 @@ while(status):
    current_date=datetime.date.today()
    current_time=datetime.datetime.now().strftime("%H:%M:%S")
    
-   # printout
-   dash="-------------------------------------------------------------"
-   
-   # file opening
-   file=open(f"{current_date}.txt","a")
-
-   # printing out the dashes/sepration
-   file.write(f"{title}\n{dash}\n")
-
-   # date and time
-   file.write(f"Date : {current_date}\n")
-   file.write(f"Time : {current_time}\n")
-
    print(dash)
    # patient info
    name=input("Enter Name : ")
@@ -39,9 +27,17 @@ Age : {age}
 Contact no : {contact}
 Vaccine Name : {vaccine_name}
 Vaccine Dose : {vaccine_dose}\n"""
+   
+   # opening the file
+   file=open(f"{current_date}.txt","a")
+   file_read=open(f"{current_date}.txt","r")
+   
+   # printing out the title only once
+   if len(file_read.readlines())==0:
+      file.write(title+"\n")
 
-   # printing out the patient info
-   file.write(info)
+   # printing out the patient info with date and time
+   file.write(f"{dash}\nDate : {current_date}\nTime : {current_time}\n{info}")
    
    # for more patients
    more=input("\nDo you want to add another patient? [y/n] : ").casefold()
@@ -49,4 +45,6 @@ Vaccine Dose : {vaccine_dose}\n"""
    if more=="y" or more=="yes":
       status=True
    else:
+      # closing the file
+      file.close()
       status=False
