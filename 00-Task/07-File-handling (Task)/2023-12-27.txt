@@ -44,3 +44,12 @@ Age : 24
 Contact no : 8745
 Vaccine Name : Rabbies
 Vaccine Dose : 4
+-------------------------------------------------------------
+Date : 2023-12-27
+Time : 23:19:17
+
+Name : Rishabh
+Age : 18
+Contact no : 9465546
+Vaccine Name : Rabbies
+Vaccine Dose : 4
