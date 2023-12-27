@@ -3,7 +3,8 @@ import datetime,os
 status=True
 
 # title/printout
-title="\t\tVaccination Report"
+title="Vaccination Report"
+print(title)
 
 while(status):
    
@@ -16,18 +17,15 @@ while(status):
    
    # file opening
    file=open(f"{current_date}.txt","a")
-   
-   # printing out the title only once in the file
-   if not os.path.exists(f"{current_date}.txt"):
-      file.write(title)
 
    # printing out the dashes/sepration
-   file.write(dash)
+   file.write(f"{title}\n{dash}\n")
 
    # date and time
-   file.write(f"Date : {current_date}")
+   file.write(f"Date : {current_date}\n")
    file.write(f"Time : {current_time}\n")
 
+   print(dash)
    # patient info
    name=input("Enter Name : ")
    age=input("Entere Age : ")
@@ -46,7 +44,7 @@ Vaccine Dose : {vaccine_dose}\n"""
    file.write(info)
    
    # for more patients
-   more=input("Do you want to add another patient? [y/n] : ").casefold()
+   more=input("\nDo you want to add another patient? [y/n] : ").casefold()
    
    if more=="y" or more=="yes":
       status=True
