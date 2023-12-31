@@ -22,8 +22,10 @@
 
         >> other
 
-        1) sort : sorts list in ascending or descending order
-                  only one datatype supported at a time
+        1) sort : 
+            - sorts list in ascending or descending order
+            - list.sort(key=..., reverse=...)
+            - sorts the original list
 
         2) reverse : reverse the list
 
@@ -32,50 +34,50 @@
 
 li=[21,"Hello",77,92,"have",'a',3,6.5,"gg",105,42,77,'a']
 
-print(li)
+print("original list :",li)
 
-# append
+# --append--
 
 li.append("day")
-print(li)
+print("append :",li)
 
-# insert
+# --insert--
 
 li.insert(5,69)
-print(li)
+print("insert :",li)
 
-# extend
+# --extend--
 
 li1=["welcome",31]
 
 li.extend(li1)
-print(li)
+print("extend :",li)
 
-# pop
+# --pop--
 
 li.pop()
 li.pop(11)
-print(li)
+print("pop :",li)
 
-# remove
+# --remove--
 
 li.remove("welcome")
-print(li)
+print("remove :",li)
 
 
-# reverse
+# --reverse--
 
 li.reverse()
 print(li)
 
-# count
+# --count--
 
 print("77 in list:",li.count(77))
 
-# sort
+# --sort--
 
-# ascending order
 li2=[55,78,92,13,5,102,66,18]
+# ascending order
 
 li2.sort()
 print(li2)
@@ -84,17 +86,16 @@ print(li2)
 li2.sort(reverse=True)
 print(li2)
 
-# del
+# --del--
 
 del li[10]
-print(li)
+print("delete :",li)
+# del li #used for deleting the variable
 
-# del li
-
-# clear
+# --clear--
 
 li.clear()
-print(li)
+print("clear :",li)
 
 
 
