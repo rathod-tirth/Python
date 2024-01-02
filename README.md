@@ -64,7 +64,7 @@
 
    - `__name__` refers to the package name it belongs to.
 
-   - You can use import everything from the package using `__all__`  
+   - `__all__` can be used to manipulate the `*` functionality. In packages without `__all__` nothing is imported and in modules everything is imported while using `*`. You can speficy what to import when using `*` in `__all__` file.
 
    ```python
    # init.py
