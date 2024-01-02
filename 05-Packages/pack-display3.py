@@ -1,5 +1,5 @@
 # importing everything from the package using the __all__
-from Package import *
+from Package2 import *
 
 num=int(input("Enter a num : "))
 print("Factorial of that number :", module1.fact(num))
