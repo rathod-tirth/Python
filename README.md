@@ -14,6 +14,8 @@
 
 - Packages and modules are essential for code organization, reusability, and maintaining clean and scalable Python projects. They allow you to encapsulate functionality, reduce naming conflicts, and structure code logically.
 
+- There are in-built modules like math, random, etc.
+
 - ### Modules :
 
    - A module in Python is simply a file containing Python code. It can define functions, classes, and variables. 
