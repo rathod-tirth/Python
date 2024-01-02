@@ -1,9 +1,9 @@
 # importing module from the same directory
 
-import module1 # imports the whole module
-from module1 import add,sub # individual objects
-from module1 import mult as multiplication # named import
-from module1 import * # imports everything
+import mod # imports the whole module
+from mod import add,sub # individual objects
+from mod import mult as multiplication # named import
+from mod import * # imports everything
 
 num1=int(input("Enter number 1 : "))
 num2=int(input("Enter number 2 : "))
