@@ -83,4 +83,30 @@
 
    - **Note :** From Python 3.3, Implicit Namespace Packages were introduced. These allow for the creation of a package without any` __init__.py` file.
 
+## File Handling :
+
+- Python supports file handling and allows users to handle files i.e., to read and write files, along with many other file handling options, to operate on files.
+
+- ### Open : 
+
+   - Before performing any operation on the file like reading or writing, first, we have to open that file. The `open()` function is used to open a file. 
+   
+   - It takes in the file path and the mode in which the file should be opened (read, write, append, etc.).
+
+   ```python
+   f = open('filename.txt','mode')
+
+   f.close()
+   ```
+
+   - Available modes: read(r), write(w), append(a)
+
+   - Remember to close the file you have opened, this will prevent data leakage and corruption.
+   
+- ### Read mode :
+
+   - Read is a mode of opening a file, which limits the file to readonly.
+
+   - If the file doesn't exist it will throw an error
+
 
