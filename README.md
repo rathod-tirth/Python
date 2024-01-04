@@ -105,8 +105,10 @@
    
 - ### Read mode :
 
-   - Read is a mode of opening a file, which limits the file to readonly.
+   - Opens a file in readonly mode.
 
-   - If the file doesn't exist it will throw an error
+   - If the file doesn't exist it will throw an error.
 
-
+   - Python reads the file using a pointer so subsequent use of read functionality will return start from the end of the previous read function since it saves the pointer at that place.
+   
+   - Subsequent attempts to read the file using `read()` will return empty string as the pointer is already at the end of the line.
