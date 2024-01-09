@@ -93,7 +93,7 @@
 
    - The `open()` function basically opens the file. Before performing any operation on the file like reading or writing first, we need to open the file.
 
-   - Python provider `open()` function to open the file which takes 2 arguments : 1. filename 2. in which mode you want to open the file.
+   - Python provides `open()` function to open the file which takes 2 arguments : 1. filename 2. in which mode you want to open the file.
 
    ```python
    f = open('filename.txt','mode')
@@ -105,7 +105,9 @@
 
 ### Read :
 
-   - Opens a file in readonly mode.
+   - While opening the file you can pass 'r' in the second argument, this will open the file in read mode.
+
+   - Read mode only allows to read the file and no other operations.
 
    - If the file doesn't exist it will throw an error.
 
