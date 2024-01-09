@@ -1,6 +1,6 @@
 # Python
 
-- ### Namespace :
+### Namespace :
 
    - Namespaces provide separate environments for names, allowing different parts of your code to have their own set of names without conflicting with each other. 
 
@@ -16,7 +16,7 @@
 
 - There are in-built modules like math, random, etc.
 
-- ### Modules :
+### Modules :
 
    - A module in Python is simply a file containing Python code. It can define functions, classes, and variables. 
    
@@ -46,7 +46,7 @@
    # SyntaxError: import * only allowed at module level
    ```
 
-- ### Packages :
+### Packages :
 
    - A package is a collection of Python modules. It's a way to organize modules into hierarchical directories and sub-directories. 
    
@@ -85,13 +85,15 @@
 
 ## File Handling :
 
-- Python supports file handling and allows users to handle files i.e., to read and write files, along with many other file handling options, to operate on files.
+- File handling is a process of working with files ,which involves creating, reading, writing, updating, and deleting the files.
 
-- ### Open : 
+- Python supports file handling i.e., to read, write, append with many other handling options to operate on files.
 
-   - Before performing any operation on the file like reading or writing, first, we have to open that file. The `open()` function is used to open a file. 
-   
-   - It takes in the file path and the mode in which the file should be opened (read, write, append, etc.).
+### Open : 
+
+   - The `open()` function basically opens the file. Before performing any operation on the file like reading or writing first, we need to open the file.
+
+   - Python provider `open()` function to open the file which takes 2 arguments : 1. filename 2. in which mode you want to open the file.
 
    ```python
    f = open('filename.txt','mode')
@@ -99,11 +101,9 @@
    f.close()
    ```
 
-   - Available modes: read(r), write(w), append(a)
+- **Close :** Remember to close the file you have opened using the `close()`, this will prevent data leakage and corruption.
 
-   - Remember to close the file you have opened, this will prevent data leakage and corruption.
-   
-- ### Read mode :
+### Read :
 
    - Opens a file in readonly mode.
 
