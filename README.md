@@ -109,8 +109,65 @@
 
    - Read mode only allows to read the file and no other operations.
 
+   ```python
+   file = open('filename.txt','r')
+   file.close()
+   ```
+
    - If the file doesn't exist it will throw an error.
 
-   - Python reads the file using a pointer so subsequent use of read functionality will return start from the end of the previous read function.
+   - Python uses pointer to keep track of current position inside the file.
+
+   - The pointer remembers the current position and determines from where the next read operation will start.
+
+   - The pointer advances automatically through the content, allowing you to access the data sequence wise and subsequent read operations will start from where the previous one ended.
+
+   - Functions :
+
+      - `read()` : retuns entire file as string
+
+      - `readlines()` : returns each line as a list element
+
+      - `realine()` : returns single line as string
+
+      - `readable()` : returns boolean values if the file is readable or not
+
+      ```python
+      # read()
+      file=open('filename.txt','r')
+      
+      read=file.read()
+      file.close()
+      ```
+
+      - Each of the in-built functions can take one argument, which tells the pointer how far does it has to travel and that will be the returning statement.
+
+### Write :
+
+- Pass 'w' in the second argument while opening a file, this will open the file in write mode.
+
+- If the file doesn't exist it will create one.
+
+```python
+file=open('filename.txt','w')
+file.close()
+```
+
+- Functions :
+
+   - `write()` : to write string on the file
+
+   - `writelines(iterator)` : to write multiple lines of string
+
+   - `writable()` : returns boolean values if the file is writeable or not
+
+   ```python
+   file=open('filename.txt','w')
    
-   - Subsequent attempts to read the file using `read()` will return empty string as the pointer is already at the end of the line.
+   file.write("Hello")
+   file.close()
+   ```
+
+- Write mode overides the existing data. So if you reopen the file and write something else the existing data will be gone only the new data will be there.
+
+- Multiple write function while the is open won't overide each other.

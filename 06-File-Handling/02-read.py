@@ -1,6 +1,9 @@
 # opening the file in read mode
 file = open('data.txt', 'r')
 
+# readable() : check if the file is readable and returns boolean value
+print("Is this file opened in read mode? :",file.readable())
+
 '''
 To read the data we use in-built functions :
 - read() : returns the entire file as string
