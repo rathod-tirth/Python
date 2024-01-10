@@ -206,3 +206,15 @@ file=open('filename.txt','a')
 file.write("Hello")
 file.close()
 ```
+
+### Other Modes :
+
+- '+' in second argument combines two mode and is helpful when there is more than one operations.
+
+- 'r+' for read and write operation on file.
+
+- 'w+' for write and append operation on file.
+
+- 'a+' for append and read operation on file.
+
+- 'b' opens the file in binary mode.
