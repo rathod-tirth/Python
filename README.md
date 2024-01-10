@@ -155,9 +155,9 @@ file.close()
 
 - Functions :
 
-   - `write()` : to write string on the file
+   - `write()` : to write string in the file
 
-   - `writelines(iterator)` : to write multiple lines of string
+   - `writelines(iterator)` : to write multiple lines of string in the file, it takes an iterator (list, tuple, dict) as an argument
 
    - `writable()` : returns boolean values if the file is writeable or not
 
@@ -170,4 +170,39 @@ file.close()
 
 - Write mode overides the existing data. So if you reopen the file and write something else the existing data will be gone only the new data will be there.
 
-- Multiple write function while the is open won't overide each other.
+- Multiple write function on an open file will increment the data and won't overwrite each other.
+
+```python
+# ----- Will overwrite -------
+file=open('filename.txt','w')
+file.write("Hello")
+file.close()
+
+file=open('filename.txt','w')
+file.write("Hi")
+file.close()
+# ---------------------------
+
+# ------ Won't overwrite -------
+file=open('filename.txt','w')
+file.write("Hello")
+file.write("How are you doing?")
+file.close()
+# -------------------------
+```
+
+### Append :
+
+- Pass 'a' in the second argument while opening a file, this will open the file in append mode.
+
+- Append mode doesn't overwrite the existing data. It adds new data to the existing data.
+
+- If the file doesn't exist it will create a new one.
+
+- Use the same functions of write mode to write the data.
+
+```python
+file=open('filename.txt','a')
+file.write("Hello")
+file.close()
+```
