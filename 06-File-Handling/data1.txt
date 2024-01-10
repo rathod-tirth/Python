@@ -3,3 +3,5 @@ How are you Doing?
 This is a car
 Jack is dancing
 Tom went grocery shopping nearby
+
+From Append mode Hello!!
