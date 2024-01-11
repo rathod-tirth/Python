@@ -218,3 +218,37 @@ file.close()
 - 'a+' for append and read operation on file.
 
 - 'b' opens the file in binary mode.
+
+- 'x' opens the file for exclusive creation. If the file already exists it will throw an error.
+
+### With :
+
+- It is very commom mistake to forget to close the file, which causes data leakage and corruption.
+
+- Here we can use with statement, which automatically close the file once the code is executed and prevents data leakage and corruption.
+
+- It also runs the code inside its own code block which makes the code more organised.
+
+```python
+with open('filename','mode') as file:
+   print(file.read())
+   # other operations...
+
+# no need to close the file it will automatically closes the file
+```
+
+### Seek :
+
+- To control the pointer inside the file we can use `seek()` function, which places the pointer at the desired position.
+
+```python
+file=open('filename','r')
+
+file.read() # returns the entire file
+
+file.seek(0) # position the pointer at start
+
+file.read() # also returns the entire file
+
+file.close()
+```
