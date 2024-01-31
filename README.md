@@ -252,3 +252,13 @@ file.read() # also returns the entire file
 
 file.close()
 ```
+
+## OOP : Object Oriented Programming
+
+- Object Oriented Programming is a method of structuring a program by bundling related properties and behaviours into individual objects.
+
+### Class :
+
+- A class is a collection of objects.
+
+- It is a blueprint for the objects.
