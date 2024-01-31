@@ -28,6 +28,7 @@ class School:
    
 # object
 obj1=School()
+print(obj1)
 
 print("Num :",obj1.num)
 print("Say",obj1.myfun())
