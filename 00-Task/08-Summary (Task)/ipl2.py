@@ -15,6 +15,9 @@ class GameData:
       self.tosswinner=""
       
       self.batORball=["Bat","Ball"]
+      self.bat=""
+      
+      self.score=[0,1,2,3,4,6,'W','NB','WIDE']
       
 class GameRandom:
    pass
@@ -45,22 +48,36 @@ class GameLogic(GameData,GameRandom):
       self.tossresult=random.choice(self.coin)
       
       if self.tossresult==self.coin[user_toss-1]:
-         self.tosswinner="User"
+         self.tosswinner=self.user_team
       else:
-         self.tosswinner="Computer"
+         self.tosswinner=self.comp_team
    
    def batORballLogic(self):
-      if self.tosswinner.casefold()=="user":
+      if self.tosswinner==self.user_team:
          user_batORball=int(input("Enter your choice : "))
+         result=self.batORball[user_batORball-1]
          
          while user_batORball>len(self.batORball):
             print("\nWrong Input Pls enter again")
             user_batORball=int(input("Enter your choice : "))
-            
-         return self.batORball[user_batORball-1]
+         
       else:
          comp_batORball=random.choice(self.batORball)
-         return comp_batORball
+         result=comp_batORball
+
+      if result.lower()=='bat':
+         self.bat=self.tosswinner
+      elif self.tosswinner==self.user_team:
+         self.bat=self.comp_team
+      else:
+         self.bat=self.user_team
+         
+      return result
+      
+   
+   def scoreLogic(self):
+      pass
+      # f"{user_team} : {runs}/{wicket} (0.{ball})"
          
 
 class PrintOut(GameLogic):
@@ -93,11 +110,16 @@ class PrintOut(GameLogic):
       print(f"{self.tosswinner} win the toss\n")
    
    def batORballPrint(self):
-      if self.tosswinner.casefold()=="user":
+      if self.tosswinner==self.user_team:
          print("Press 1 for : Bat\nPress 2 for : Ball\n")
       
       result=self.batORballLogic()
       print(f"\n{self.tosswinner} choose to {result}")
+      
+      # if result.lower()=="bat":
+      #    self.bat=self.tosswinner
+      # else:
+         
       
 # title
 dash="----------------------------------------------------"
