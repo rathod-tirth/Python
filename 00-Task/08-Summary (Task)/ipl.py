@@ -3,9 +3,8 @@
 import random
 
 # title
-start="IPL".center(50)
 dash="----------------------------------------------------"
-print(f"{start}\n{dash}")
+print("IPL".center(50)+f"\n{dash}")
 
 # available teams
 print("Team Selection".center(50)+f"\n{dash}\n")
