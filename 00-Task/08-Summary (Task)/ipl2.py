@@ -112,9 +112,6 @@ class GameLogic(GameData,GameRandom):
 
             if runs>=self.runs:
                break
-
-         input("Press Enter to Continue...")
-         # self.runs=runs
          
          if current_score=="W" and not freehit:
             break
@@ -122,6 +119,8 @@ class GameLogic(GameData,GameRandom):
             freehit=True
          else:
             freehit=False
+            
+         input("Press Enter to Continue...")
       
       if self.innings==1:
          self.runs=runs+1
@@ -181,8 +180,15 @@ class PrintOut(GameLogic):
 dash="----------------------------------------------------"
 print("IPL".center(50)+f"\n{dash}")
 
-ipl=PrintOut()
-ipl.teamPrint()
-ipl.tossPrint()
-ipl.batORballPrint()
-ipl.scorePrint()
+while True:
+   ipl=PrintOut()
+   ipl.teamPrint()
+   ipl.tossPrint()
+   ipl.batORballPrint()
+   ipl.scorePrint()
+   
+   more=input("\nDo you want to continue? [y/n] : ")
+   
+   if more.lower()!='y':
+      print("\nThank you for playing")
+      break
