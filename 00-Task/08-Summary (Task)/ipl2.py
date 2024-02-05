@@ -170,11 +170,7 @@ class PrintOut(GameLogic):
          print("Press 1 for : Bat\nPress 2 for : Ball\n")
       
       result=self.batORballLogic()
-      print(f"\n{self.tosswinner} choose to {result}")
-      
-   def scorePrint(self):
-      self.scoreLogic()
-         
+      print(f"\n{self.tosswinner} choose to {result}")  
       
 # title
 dash="----------------------------------------------------"
@@ -185,7 +181,7 @@ while True:
    ipl.teamPrint()
    ipl.tossPrint()
    ipl.batORballPrint()
-   ipl.scorePrint()
+   ipl.scoreLogic()
    
    more=input("\nDo you want to continue? [y/n] : ")
    
