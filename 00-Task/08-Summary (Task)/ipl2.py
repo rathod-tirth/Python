@@ -21,11 +21,8 @@ class GameData:
       self.score=[0,1,2,3,4,6,'W','NB','WIDE']
       self.runs=0
       self.innings=1
-      
-class GameRandom:
-   pass
 
-class GameLogic(GameData,GameRandom):
+class GameLogic(GameData):
    def teamSelection(self):
       # user team choice
       user_choice=int(input("\nEnter your choice : "))
